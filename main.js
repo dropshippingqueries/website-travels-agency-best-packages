@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         "Burj Khalifa - 124 & 125 Level - Non Prime",
                         "Airport Transfer from Dubai Airport (DXB) to Deira/Bur Dubai Hotel",
                         "Airport Transfer from Deira/Bur Dubai Hotel to Dubai Airport (DXB)"
+                    ],
+                    exclusions: [
+                        "Flight Bookings",
+                        "Visas",
+                        "Hotel bookings"
                     ]
                 }
             ]
@@ -23,6 +28,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // Maldives - Special resort display format
         maldives: {
             type: "resorts", // Special flag for resort display
+            exclusions: [
+                "Flight Bookings",
+                "Visas"
+            ],
             resorts: [
                 {
                     name: "Villa Nautica",
@@ -82,6 +91,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         "Transfer from Pattaya hotel to Bangkok hotel",
                         "Bangkok City Tour with Gems Gallery (Golden Buddha & Marble Temple) With Transfers",
                         "Transfer from Bangkok hotel to Suvarnabhumi Bangkok Airport"
+                    ],
+                    exclusions: [
+                        "Flight Bookings",
+                        "Visas",
+                        "Hotel bookings"
                     ]
                 },
                 {
@@ -96,6 +110,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         "Under Water World (SIC)",
                         "Coral Island Tour by Speed Boat with Lunch",
                         "Transfer from Pattaya hotel to Bangkok hotel"
+                    ],
+                    exclusions: [
+                        "Flight Bookings",
+                        "Visas",
+                        "Hotel bookings"
                     ]
                 }
             ]
@@ -110,6 +129,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         "Nusa Penida West Day Trip from Bali: Kelingking cliff, Broken beach, Angel Billabong, Crystal bay, local lunch (complimentary snorkeling)",
                         "Aloha Ubud Swing, Tegalalang Rice Terraces (photo stop), Mount Batur view with lunch at Amora cafe, coffee plantation visit",
                         "Transfer from Kuta/Legian to Airport"
+                    ],
+                    exclusions: [
+                        "Flight Bookings",
+                        "Visas",
+                        "Hotel bookings"
                     ]
                 },
                 {
@@ -122,6 +146,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         "Desa Swing (1 x Extreme Swing + 1 x nest) with lunch, Tegalalang Rice Terraces (photo stop), Mount Batur view point, coffee plantation visit",
                         "Bedugul Tour 1: Wanagiri View Point, Handara Gate, Beratan Temple, Tanah Lot Temple",
                         "Transfer from Ubud/Gianyar Hotel to Airport"
+                    ],
+                    exclusions: [
+                        "Flight Bookings",
+                        "Visas",
+                        "Hotel bookings"
                     ]
                 },
                 {
@@ -135,6 +164,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         "Desa Swing Package 3 (Unlimited swings + 5 nests + Gate Paradise), Tegalalang Rice Terraces (photo stop), Mount Batur view with lunch at Amora Cafe",
                         "Ubud Cultural Tour 1: Celuk and Mas Artisan Villages, Cantik Coffee Plantation, Saraswati Temple, Ubud Palace with Legang/Barong Dance",
                         "Transfer from Ubud/Gianyar Hotel to Airport"
+                    ],
+                    exclusions: [
+                        "Flight Bookings",
+                        "Visas",
+                        "Hotel bookings"
                     ]
                 }
             ]
@@ -150,6 +184,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         "Sentosa [ Cable Car + Sky Helix + Wings of time ]",
                         "Singapore Zoo & Night Safari Combo",
                         "Transfer from Singapore Hotel to Singapore Airport"
+                    ],
+                    exclusions: [
+                        "Flight Bookings",
+                        "Visas",
+                        "Hotel bookings"
                     ]
                 },
                 {
@@ -163,6 +202,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         "Transfer from Singapore Airport to Singapore Hotel",
                         "Marina Bay Sands Sky Park and Gardens By the Bay Tour (Flower Dome + Cloud Forest + Supertree Observatory {Before 4:00 PM}) Combo",
                         "Sentosa [ Cable Car+ Luge & Skyline (3 Rides - 10am-03pm) + Madame Tussauds - 4 in 1 + Wings of Time ]"
+                    ],
+                    exclusions: [
+                        "Flight Bookings",
+                        "Visas",
+                        "Hotel bookings"
                     ]
                 }
             ]
@@ -222,7 +266,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         </div>
                     `;
 
-                    modalBody.innerHTML = renderResortCards(destData.resorts);
+                    modalBody.innerHTML = renderResortCards(destData.resorts) + renderExclusions(destData.exclusions);
                     modal.classList.add("show");
                 } else if (destData.options) {
                     // Standard itinerary display
@@ -289,6 +333,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                             <div class="itinerary-section">
                                 <div class="itinerary-content">
                                     ${renderItinerary(firstOption)}
+                                    ${renderExclusions(firstOption.exclusions)}
                                 </div>
                                 <div class="itinerary-pricing">
                                     <span class="price-label">Package Price:</span>
@@ -327,7 +372,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     function updateModalContent(selectedOption) {
-        document.querySelector('.itinerary-content').innerHTML = renderItinerary(selectedOption);
+        document.querySelector('.itinerary-content').innerHTML = renderItinerary(selectedOption) + renderExclusions(selectedOption.exclusions);
         document.querySelector('.itinerary-pricing .price-value').textContent = selectedOption.price;
     }
 
@@ -490,6 +535,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
         stagger: 0 // All start at same position
     });
 });
+
+// Helper Function for Exclusions
+function renderExclusions(exclusions) {
+    if (!exclusions || exclusions.length === 0) return '';
+
+    return `
+        <div class="exclusion-section">
+            <h4 class="exclusion-title">Exclusions:</h4>
+            <ul class="exclusion-list">
+                ${exclusions.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+        </div>
+    `;
+}
 
 // --- NAVBAR SCROLL EFFECT ---
 // Make navbar opaque when leaving hero section and entering packages

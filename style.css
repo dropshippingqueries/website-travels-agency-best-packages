@@ -2199,3 +2199,40 @@ footer {
         padding: 3rem 1rem 0;
     }
 }
+
+/* Exclusions Section */
+.exclusion-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.exclusion-title {
+    font-size: 1.1rem;
+    color: #d32f2f; /* Red color for warning/exclusion */
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.exclusion-list {
+    list-style: none;
+    padding: 0;
+}
+
+.exclusion-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #555;
+    text-align: left;
+}
+
+.exclusion-list li::before {
+    content: "✕"; /* Cross icon */
+    position: absolute;
+    left: 0;
+    color: #d32f2f;
+    font-weight: bold;
+    font-size: 1rem;
+}
