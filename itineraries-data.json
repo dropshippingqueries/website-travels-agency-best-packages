@@ -1,0 +1,102 @@
+{
+  "thailand": {
+    "4nights": {
+      "duration": "4 Nights 5 Days",
+      "price": "INR 10,599",
+      "priceNumeric": 10599,
+      "itinerary": [
+        "Alcazar (Normal Seat)",
+        "Coral Island Tour by Speed Boat with Lunch",
+        "Transfer from Pattaya hotel to Bangkok hotel",
+        "Bangkok City Tour with Gems Gallery (Golden Buddha & Marble Temple) With Transfers",
+        "Transfer from Bangkok hotel to Suvarnabhumi Bangkok Airport"
+      ]
+    },
+    "5nights": {
+      "duration": "5 Nights 6 Days",
+      "price": "INR 21,899",
+      "priceNumeric": 21899,
+      "itinerary": [
+        "Full Day Safari World with Marine Park including Lunch",
+        "Bangkok City Tour with Gems Gallery (Golden Buddha & Marble Temple) With Transfers",
+        "Transfer from Bangkok hotel to Suvarnabhumi Bangkok Airport",
+        "Transfer from Suvarnabhumi Bangkok Airport to Pattaya Hotel",
+        "Alcazar Show (Normal Seat)",
+        "Under Water World (SIC)",
+        "Coral Island Tour by Speed Boat with Lunch",
+        "Transfer from Pattaya hotel to Bangkok hotel"
+      ]
+    }
+  },
+  "bali": {
+    "4nights": {
+      "duration": "4 Nights 5 Days",
+      "price": "INR 13,999",
+      "priceNumeric": 13999,
+      "itinerary": [
+        "Watersports (Banana Boat + Parasailing + Jet Ski), Photo stop at Tanah Barak, Uluwatu Temple, Kecak Dance",
+        "Nusa Penida West Day Trip from Bali: Kelingking cliff, Broken beach, Angel Billabong, Crystal bay, local lunch (complimentary snorkeling)",
+        "Aloha Ubud Swing, Tegalalang Rice Terraces (photo stop), Mount Batur view with lunch at Amora cafe, coffee plantation visit",
+        "Transfer from Kuta/Legian to Airport"
+      ]
+    },
+    "5nights": {
+      "duration": "5 Nights 6 Days",
+      "price": "INR 17,999",
+      "priceNumeric": 17999,
+      "itinerary": [
+        "Watersports (Banana Boat + Parasailing + Jet Ski), Photo stop at Tanah Barak, Uluwatu Temple, Kecak Dance",
+        "Nusa Penida West Day Trip from Bali: Kelingking cliff, Broken beach, Angel Billabong, Crystal bay, local lunch (complimentary snorkeling)",
+        "Inter Hotel Transfer from Kuta/Legian/Seminyak to Ubud/Gianyar/Sanur",
+        "Desa Swing (1 x Extreme Swing + 1 x nest) with lunch, Tegalalang Rice Terraces (photo stop), Mount Batur view point, coffee plantation visit",
+        "Bedugul Tour 1: Wanagiri View Point, Handara Gate, Beratan Temple, Tanah Lot Temple",
+        "Transfer from Ubud/Gianyar Hotel to Airport"
+      ]
+    },
+    "6nights": {
+      "duration": "6 Nights 7 Days",
+      "price": "INR 22,599",
+      "priceNumeric": 22599,
+      "itinerary": [
+        "Watersports (Banana Boat + Parasailing + Jet Ski), Photo stop at Tanah Barak, Uluwatu Temple, Kecak Dance",
+        "Nusa Penida West Day Trip from Bali: Kelingking cliff, Broken beach, Angel Billabong, Crystal bay, local lunch (complimentary snorkeling)",
+        "River Ayung Rafting with Indonesian Lunch, Jambe Asri ATV ride Full Circuit (tandem - 120 mins)",
+        "Inter Hotel Transfer from Kuta/Legian/Seminyak to Ubud/Gianyar/Sanur",
+        "Desa Swing Package 3 (Unlimited swings + 5 nests + Gate Paradise), Tegalalang Rice Terraces (photo stop), Mount Batur view with lunch at Amora Cafe",
+        "Ubud Cultural Tour 1: Celuk and Mas Artisan Villages, Cantik Coffee Plantation, Saraswati Temple, Ubud Palace with Legang/Barong Dance",
+        "Transfer from Ubud/Gianyar Hotel to Airport"
+      ]
+    }
+  },
+  "singapore": {
+    "4nights": {
+      "duration": "4 Nights 5 Days",
+      "price": "INR 21,100",
+      "priceNumeric": 21100,
+      "itinerary": [
+        "Universal Studios Singapore",
+        "Transfer from Singapore Airport to Singapore Hotel",
+        "Sentosa [ Cable Car + Sky Helix + Wings of time ]",
+        "Singapore Zoo & Night Safari Combo",
+        "Transfer from Singapore Hotel to Singapore Airport"
+      ]
+    },
+    "5nights": {
+      "duration": "5 Nights 6 Days",
+      "price": "INR 40,599",
+      "priceNumeric": 40599,
+      "itinerary": [
+        "Universal Studios Singapore",
+        "Singapore City Tour with Flyer ticket",
+        "Universal Studios + Singapore Oceanarium (Non - Peak)",
+        "Transfer from Singapore Hotel to Singapore Airport",
+        "Transfer from Singapore Airport to Singapore Hotel",
+        "Marina Bay Sands Sky Park and Gardens By the Bay Tour (Flower Dome + Cloud Forest + Supertree Observatory {Before 4:00 PM}) Combo",
+        "Sentosa [ Cable Car+ Luge & Skyline (3 Rides - 10am-03pm) + Madame Tussauds - 4 in 1 + Wings of Time ]"
+      ]
+    }
+  },
+  "maldives": {
+    "note": "Maldives itinerary to be added later"
+  }
+}

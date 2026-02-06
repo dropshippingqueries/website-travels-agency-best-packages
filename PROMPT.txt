@@ -1,0 +1,31 @@
+https://offground.solutions/
+https://liquidtechnology.net/
+https://lightweight.info/en
+
+
+
+create an award winning websit for a travel agency named "openair holidays". the website sells packages and provides visas. the website theme should be light orange, blue, and one more colour which matches with the abvoe colour. blend them beautifully so that it doesn't look obnoxious. the logo is at @beautifulMention. use this logo in header and favicon too. in the header beside the logo, openair holidays must be written. 
+
+the agency provides following packages:
+1. dubai
+2, maldives
+3. thailand
+4. bali
+5. singapore
+
+you can add 2-3 sub-packages per package as options. add inclusions and exclusions as well.you can also add your own itinerary. but make sure that all the images,information you provide is explicitly clear and very right. make sure to use less CDN as possible so as to avoid complications while hosting the website live with the help of hostinger. 
+
+visas:
+1. all asian countries
+2. all european coutries
+3. australia
+4. USA
+5. canda
+6. middle east
+
+for reference you can refer the below websites.the website should be light-weight,mobile friendly, light theme with a mixture of dark theme.
+
+https://offground.solutions/
+https://liquidtechnology.net/
+https://lightweight.info/en
+
