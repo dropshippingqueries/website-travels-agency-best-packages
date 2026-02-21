@@ -855,7 +855,8 @@ body {
 
 /* Packages Section */
 .packages-section {
-    padding: 4rem 2%;
+    padding: 3rem 2%;
+    padding-bottom: 3rem;
     margin-top: -1.5rem;
     /* Reduced overlap - section positioned lower for better visibility */
     border-radius: 30px 30px 0 0;
@@ -875,6 +876,8 @@ body {
             #E0D5C8 20%,
             #FFF8E1 50%,
             #ffffff 100%) fixed;
+    /* Clip shadow so it only shows on top, not bleeding into the section below */
+    clip-path: inset(-100px -0px 0px -0px);
 }
 
 /* Map Background for Packages */
@@ -906,7 +909,7 @@ body {
 
 .section-subtitle {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: rgba(26, 26, 26, 0.7);
     margin-bottom: 4rem;
 }
@@ -1073,8 +1076,8 @@ body {
 
 /* Visa Section */
 .visa-section {
-    padding: 4rem 5%;
-    /* Reduced padding and fixed syntax error */
+    padding: 1.5rem 5% 3rem;
+    border-top: 2px solid rgba(0, 0, 0, 0.12);
     /* Unified Gradient with Fixed Attachment */
     background: linear-gradient(to bottom,
             #D5C9B8 0%,
@@ -1086,7 +1089,6 @@ body {
     position: relative;
     z-index: 10;
     overflow: hidden;
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1543,6 +1545,226 @@ body {
     }
 }
 
+/* ===== Group Booking Section ===== */
+.group-booking-section {
+    padding: 3rem 5% 1.5rem;
+    border-top: 2px solid rgba(0, 0, 0, 0.12);
+    background: linear-gradient(to bottom,
+            #D5C9B8 0%,
+            #E0D5C8 20%,
+            #FFF8E1 50%,
+            #ffffff 100%) fixed;
+    color: var(--text-dark);
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* Map texture overlay */
+.group-booking-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Images/visa_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.12;
+    filter: sepia(0.3);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.group-booking-section .section-title {
+    margin-bottom: 0.5rem;
+}
+
+.group-booking-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* Group Card Grid */
+.group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Group Card */
+.group-card {
+    background: #fff5e8;
+    border-radius: 18px;
+    padding: 2.5rem 2rem 2rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.group-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.group-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.group-card:hover::after {
+    opacity: 1;
+}
+
+/* Card Icon */
+.group-card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.group-card:hover .group-card-icon {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.group-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.8rem;
+    font-family: var(--font-heading);
+}
+
+.group-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(26, 26, 26, 0.75);
+    margin: 0;
+}
+
+/* CTA Area */
+.group-cta {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.group-cta-text {
+    font-size: 1.75rem;
+    color: rgba(0, 0, 0, 0.726);
+    font-weight: 900;
+    margin-top: 0%;
+    margin-bottom: 1%
+}
+
+.group-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 16px 40px;
+    background: #25D366;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.3px;
+}
+
+.group-cta-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent,
+            transparent 40%,
+            rgba(255, 255, 255, 0.3) 50%,
+            transparent 60%,
+            transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.group-cta-btn:hover::before {
+    transform: translateX(100%);
+}
+
+.group-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+    background: #1ebe5a;
+}
+
+.group-wa-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .group-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .group-booking-section {
+        padding: 4rem 3%;
+    }
+}
+
+@media (max-width: 600px) {
+    .group-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .group-booking-section {
+        padding: 3rem 1rem;
+    }
+
+    .group-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .group-cta-btn {
+        padding: 14px 30px;
+        font-size: 1rem;
+    }
+}
+
 /* Footer */
 footer {
     /* Unified Gradient with Fixed Attachment */
@@ -1557,7 +1779,7 @@ footer {
     text-align: center;
     position: relative;
     z-index: 10;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
     overflow: hidden;
     /* Ensure pseudo-element is contained */
 }
