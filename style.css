@@ -857,27 +857,16 @@ body {
 .packages-section {
     padding: 3rem 2%;
     padding-bottom: 3rem;
-    margin-top: -1.5rem;
-    /* Reduced overlap - section positioned lower for better visibility */
-    border-radius: 30px 30px 0 0;
-    /* Curved top corners for elevated card effect */
-    box-shadow:
-        0 -25px 80px rgba(0, 0, 0, 0.25),
-        0 -10px 40px rgba(0, 0, 0, 0.15),
-        0 -5px 15px rgba(0, 0, 0, 0.1);
-    /* Multi-layered shadow for dramatic depth and visibility */
-    position: relative;
-    z-index: 50;
-    /* Ensure it sits above hero section */
-    overflow: hidden;
-    /* Unified Gradient with Fixed Attachment for seamless flow */
+    border-top: 2px solid rgba(0, 0, 0, 0.12);
     background: linear-gradient(to bottom,
             #D5C9B8 0%,
             #E0D5C8 20%,
             #FFF8E1 50%,
             #ffffff 100%) fixed;
-    /* Clip shadow so it only shows on top, not bleeding into the section below */
-    clip-path: inset(-100px -0px 0px -0px);
+    color: var(--text-dark);
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
 }
 
 /* Map Background for Packages */
@@ -1548,7 +1537,15 @@ body {
 /* ===== Group Booking Section ===== */
 .group-booking-section {
     padding: 3rem 5% 1.5rem;
-    border-top: 2px solid rgba(0, 0, 0, 0.12);
+    margin-top: -1.5rem;
+    /* Overlap hero for 3D flap page effect */
+    border-radius: 30px 30px 0 0;
+    /* Curved top corners for elevated card effect */
+    box-shadow:
+        0 -25px 80px rgba(0, 0, 0, 0.25),
+        0 -10px 40px rgba(0, 0, 0, 0.15),
+        0 -5px 15px rgba(0, 0, 0, 0.1);
+    /* Multi-layered shadow for dramatic depth and visibility */
     background: linear-gradient(to bottom,
             #D5C9B8 0%,
             #E0D5C8 20%,
@@ -1557,8 +1554,11 @@ body {
     color: var(--text-dark);
     text-align: center;
     position: relative;
-    z-index: 10;
+    z-index: 50;
+    /* Ensure it sits above hero section */
     overflow: hidden;
+    /* Clip shadow so it only shows on top, not bleeding into the section below */
+    clip-path: inset(-100px -0px 0px -0px);
 }
 
 /* Map texture overlay */
