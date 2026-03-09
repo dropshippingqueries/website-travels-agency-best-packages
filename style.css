@@ -889,7 +889,7 @@ body {
 
 .section-title {
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--text-dark);
     margin-top: -2rem;
     margin-bottom: 1rem;
@@ -898,8 +898,8 @@ body {
 
 .section-subtitle {
     text-align: center;
-    font-size: 1.4rem;
-    color: rgba(26, 26, 26, 0.7);
+    font-size: 1.7rem;
+    color: rgb(26, 26, 26);
     margin-bottom: 4rem;
 }
 
@@ -1055,7 +1055,7 @@ body {
     }
 
     .section-title {
-        font-size: 2.2rem;
+        font-size: 3.0rem;
     }
 
     .package-grid {
@@ -1115,16 +1115,18 @@ body {
 }
 
 .visa-content h2 {
-    font-size: 3.5rem;
+    font-size: 3.0rem;
     margin-bottom: 1rem;
     color: var(--text-dark);
     text-shadow: none;
 }
 
 .visa-content p {
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-    color: rgba(26, 26, 26, 0.8);
+    margin-bottom: 0.3rem;
+    font-size: 1.7rem;
+    color: rgb(26, 26, 26);
+    /* color: var(--text-dark); */
+
 }
 
 .visa-grid {
@@ -1676,7 +1678,7 @@ body {
 
 .group-cta-text {
     font-size: 1.75rem;
-    color: rgba(0, 0, 0, 0.726);
+    color: rgb(0, 0, 0);
     font-weight: 900;
     margin-top: 0%;
     margin-bottom: 1%
